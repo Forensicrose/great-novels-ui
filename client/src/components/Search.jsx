@@ -17,7 +17,7 @@ const Search = () => {
   };
 
   return (
-    <div className="content">
+    <div className="novels">
     <div className="title">Great Novels</div>
     <input 
         className="searchBox" 

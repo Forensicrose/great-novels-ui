@@ -1,0 +1,23 @@
+body {
+  background-color: skyblue;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.title {
+  color: brown;
+  text-align: center;
+  margin: 100px;
+  font-size: 65px;
+  margin-bottom: 0px;
+}
+
+.novels {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.searchBox {
+  font-size: 20px;
+}

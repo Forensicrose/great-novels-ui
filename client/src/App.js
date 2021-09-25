@@ -1,9 +1,9 @@
 import './App.css';
-import Novel from './components/Novel'
+import Search from './components/Search'
 
 function App() {
   return (
-    <Novel/>
+    <Search/>
   );
 }
 

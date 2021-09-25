@@ -13,7 +13,7 @@ const getAuthorByIdOrName = async (request, response) => {
     where: {
       [models.Sequelize.Op.or]: [
         { id: identifier },
-        { nameLast: { [models.Sequelize.Op.like]: `%${identifier}%` } },
+        { lastName: { [models.Sequelize.Op.like]: `%${identifier}%` } },
       ]
     },
     include: [{

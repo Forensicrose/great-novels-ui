@@ -1,5 +1,5 @@
 import './App.css';
-import Novel from './components/Bio'
+import Novel from './components/Novel'
 
 function App() {
   return (

@@ -6,25 +6,15 @@ const Search = () => {
   const [novels, setNovels] = useState([]);
 
   useEffect(() => {
-    const fetchNovels = async () => {
-      let fetch = await axios.get('http://localhost:1337/api/novels')
+    fetchNovels();
+  }, []);
 
-      setNovels(fetch.data)
-      console.log(fetch.data)
+  const fetchNovels = async() => {
+    let { data } = await axios.get('http://localhost:1337/api/novels');
+    console.log(data)
 
-  // useEffect(() => {
-  //   fetchNovels();
-  // }, []);
-
-  // const fetchNovels = async() => {
-  //   let { data } = await axios.get('http://localhost:1337/api/novels');
-  //   console.log(data)
-
-  //   setNovels(data);
-  }
-    fetchNovels()
-  }, [])
-;
+    setNovels(data);
+  };
 
   return (
     <div className="content">
@@ -37,8 +27,8 @@ const Search = () => {
         onChange={event => setIdentifier(event.target.value)} 
     />
     {
-       novels.filter(novel => novel.name.toLowerCase().includes(identifier.toLowerCase())).map(novel => {
-          return (<h1>{novel.name}</h1>)
+       novels.filter(novel => novel.title.toLowerCase().includes(identifier.toLowerCase())).map(novel => {
+          return (<h1 key={novel.id}>{novel.title} by {novel.author.firstName} {novel.author.lastName}</h1>)
        })
     }
     </div>
